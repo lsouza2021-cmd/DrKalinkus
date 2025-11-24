@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Função do Primeiro Grau - Explicação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    /* Resetting some browser defaults */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: #0d2c1a;
+      color: #e6f8ef;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+      line-height: 1.8;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #144d2a;
+      border-bottom: 5px solid #06d6a0;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #fff;
+    }
+
+    .content {
+      padding: 40px 20px;
+      font-size: 1.25em;
+      max-width: 1100px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 1.8em;
+      color: #06d6a0;
+    }
+
+    p, ul {
+      margin-bottom: 20px;
+    }
+
+    pre {
+      background: rgba(0, 0, 0, 0.2);
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 1.1em;
+      margin: 15px 0;
+    }
+
+    ul {
+      margin-left: 1.5em;
+    }
+
+    img {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+      border: 3px solid #e6f8ef;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #144d2a;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+      color: #9fb0cc;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #06d6a0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .start-button {
+      background: #4ecdc4;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      margin: 40px auto;
+      display: block;
+      font-family: 'Press Start 2P', cursive;
+      transition: background 0.3s ease, transform 0.1s ease;
+    }
+
+    .start-button:hover {
+      background: #3ac7be;
+      transform: translateY(-2px);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Função do Primeiro Grau</h1>
+  </header>
+
+  <div class="content">
+    <h2>O que é a Função do Primeiro Grau?</h2>
+    <p>A função do primeiro grau, também chamada de função linear, é uma função matemática que representa uma reta. O comportamento dessa reta depende dos valores dos coeficientes na função. Sua forma geral é:</p>
+    <pre>f(k) = ak + b</pre>
+    <p>Onde:</p>
+    <ul>
+      <li><strong>a</strong>: coeficiente angular, que define a inclinação da reta;</li>
+      <li><strong>b</strong>: coeficiente linear, que define o ponto onde a reta corta o eixo Y;</li>
+      <li><strong>k</strong>: variável independente, ou seja, o valor que se substitui na função.</li>
+    </ul>
+
+    <h2>Como Resolver uma função do Primeiro Grau?</h2>
+    <p>Para resolver uma função do primeiro grau, precisamos encontrar o valor de <strong>k</strong> que torna a função verdadeira. Vamos resolver um exemplo simples:</p>
+    <pre>2k + 3 = 7</pre>
+    <p><strong>Passo 1:</strong> Subtraímos 3 dos dois lados da função para isolar o termo com <strong>k</strong>:</p>
+    <pre>2k = 4</pre>
+    <p><strong>Passo 2:</strong> Agora, dividimos ambos os lados por 2 para encontrar o valor de <strong>k</strong>:</p>
+    <pre>k = 2</pre>
+    <p><strong>Logo, a solução é k = 2.</strong></p>
+
+    <h2>Propriedades Importantes da Função do Primeiro Grau</h2>
+    <ul>
+      <li>O gráfico de uma função do primeiro grau é sempre uma <strong>reta</strong>;</li>
+      <li>Se <strong>a &gt; 0</strong>, a reta é crescente (subindo da esquerda para a direita);</li>
+      <li>Se <strong>a &lt; 0</strong>, a reta é decrescente (descendo da esquerda para a direita);</li>
+      <li>O valor de <strong>b</strong> determina o ponto onde a reta intercepta o eixo Y;</li>
+      <li>A função do primeiro grau pode ser usada para modelar situações como o planejamento de economias mensais.</li>
+    </ul>
+
+    <h2>Exemplo Gráfico</h2>
+    <p>Vamos visualizar o gráfico de uma função do primeiro grau. Para a função <strong>f(k) = 2k + 3</strong>, o gráfico seria uma reta crescente. Aqui está um exemplo:</p>
+    <img src="grafico_funcao.png" alt="Gráfico da função f(k)=2k+3">
+    
+    <h2>Outro Exemplo</h2>
+    <p>Agora, vamos analisar uma função em que <strong>a &lt; 0</strong>, ou seja, a reta será decrescente. Para a função <strong>f(k) = -3k + 5</strong>, temos:</p>
+    <pre>f(k) = -3k + 5</pre>
+    <p>Para <strong>k = 0</strong>, o valor de <strong>f(k)</strong> é:</p>
+    <pre>f(0) = -3(0) + 5 = 5</pre>
+    <p>Ou seja, o ponto <strong>(0, 5)</strong> está no gráfico. Como o coeficiente angular é negativo, a reta descerá à medida que <strong>k</strong> aumenta.</p>
+
+    <h2>Resumo</h2>
+    <p>A função do primeiro grau é uma ferramenta fundamental para resolver problemas que envolvem relações lineares. Com ela, podemos modelar desde simples comportamentos de reta até situações mais complexas.</p>
+	<p>🚀 Agora que você está preparado, será que tem coragem de enfrentar os drones do Dr. Kalinkus 🦾 e conquistar o desafio? 💥💡<p>
+ 	 </div>
+
+  <button class="start-button" onclick="window.location.href='index.html'">Voltar ao Início!</button>
+
+  <footer>
+    <p>Criado por Leonardo de Souza</p>
+  </footer>
+
+</body>
+</html>

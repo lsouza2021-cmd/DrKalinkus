@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -25,20 +26,22 @@
       align-items: center;
       min-height: 100vh;
       padding: 20px; /* dá respiro em telas pequenas */
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .game-container {
-  background: var(--light-color);
-  border-radius: 25px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  padding: 30px;
-  text-align: center;
-  max-width: 900px;
-  width: 100%;
-  border: 5px solid #00cc44; /* verde se você já trocou */
-  animation: fadeIn 1s ease-out;
-  z-index: 10;
-}
+      background: var(--light-color);
+      border-radius: 25px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+      text-align: center;
+      max-width: 900px;
+      width: 100%;
+      border: 5px solid #00cc44; /* verde se você já trocou */
+      animation: fadeIn 1s ease-out;
+      z-index: 10;
+    }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
@@ -46,12 +49,12 @@
     }
 
     h1 {
-  font-family: 'Press Start 2P', cursive;
-  color: #00cc44; /* verde no título */
-  font-size: 2.2em;
-  margin-bottom: 20px;
-  text-shadow: 4px 4px 0px #004d1a; /* sombra verde mais escura */
-}
+      font-family: 'Press Start 2P', cursive;
+      color: #00cc44; /* verde no título */
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      text-shadow: 4px 4px 0px #004d1a; /* sombra verde mais escura */
+    }
 
     .story-text {
       font-size: 1.1em;
@@ -152,7 +155,11 @@
       Cada drone está protegido por uma <strong>equação do primeiro grau</strong>. 
       Resolva-as corretamente para destruí-los e salvar a educação! 📚
     </p>
+
     <button class="start-button" onclick="window.location.href='jogo.html'">Começar Jogo!</button>
+    <button class="start-button" onclick="window.location.href='explicacao.html'">Ver Explicação!</button>
   </div>
+
+  <p style="font-size: 0.8em; color: #333; text-align: center; margin-top: 20px;">Criado por Leonardo de Souza</p>
 </body>
 </html>
