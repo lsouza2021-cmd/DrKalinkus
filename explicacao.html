@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Função do Primeiro Grau - Explicação</title>
+  <title>Função do Primeiro Grau - Explicação Aprimorada</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
   <style>
-    /* Resetting some browser defaults */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Press Start 2P', cursive;
@@ -19,157 +15,220 @@
       color: #e6f8ef;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       min-height: 100vh;
-      line-height: 1.8;
+      line-height: 1.6;
+      font-size: 14px; /* <<< tamanho geral médio */
     }
 
     header {
       text-align: center;
-      padding: 40px 20px;
+      padding: 35px 20px;
       background-color: #144d2a;
       border-bottom: 5px solid #06d6a0;
     }
 
-    header h1 {
-      font-size: 3em;
+    header h1 { 
+      font-size: 2.3em; /* <<< equilibrado */
       color: #fff;
     }
 
     .content {
-      padding: 40px 20px;
-      font-size: 1.25em;
+      padding: 35px 20px;
       max-width: 1100px;
       margin: 0 auto;
-      line-height: 1.7;
+      font-size: 1.1em; /* <<< levemente maior */
     }
 
     h2 {
-      margin-top: 40px;
-      font-size: 1.8em;
+      margin-top: 35px;
+      font-size: 1.5em; /* <<< mais legível */
       color: #06d6a0;
     }
 
-    p, ul {
-      margin-bottom: 20px;
+    p, ul { 
+      margin-bottom: 18px; 
     }
 
     pre {
-      background: rgba(0, 0, 0, 0.2);
-      padding: 15px;
-      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.25);
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 1em; /* tamanho correto */
       overflow-x: auto;
-      font-size: 1.1em;
-      margin: 15px 0;
+      border-left: 4px solid #06d6a0;
     }
 
-    ul {
-      margin-left: 1.5em;
+    .box, .exercise-box {
+      padding: 18px;
+      border-radius: 12px;
+      margin: 22px 0;
+      font-size: 1em;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid #06d6a0;
+    }
+
+    .exercise-box {
+      background: rgba(0, 255, 170, 0.12);
+      border: 2px dashed #06d6a0;
+    }
+
+    button {
+      background: #4ecdc4;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1em; /* <<< melhor tamanho */
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+      padding: 12px;
+      background: rgba(255,255,255,0.12);
+      border-left: 4px solid #06d6a0;
+      font-size: 1em;
     }
 
     img {
       display: block;
-      margin: 30px auto;
+      margin: 25px auto;
       max-width: 100%;
-      border: 3px solid #e6f8ef;
       border-radius: 10px;
+      border: 3px solid #e6f8ef;
     }
 
     footer {
       background-color: #144d2a;
       text-align: center;
       padding: 20px 10px;
-      font-size: 14px;
       color: #9fb0cc;
       margin-top: 40px;
     }
 
-    a {
-      color: #06d6a0;
-      text-decoration: none;
+    .back-top {
+      display: inline-block;
+      margin-top: 10px;
     }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .start-button {
-      background: #4ecdc4;
-      color: white;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 15px;
-      cursor: pointer;
-      margin: 40px auto;
-      display: block;
-      font-family: 'Press Start 2P', cursive;
-      transition: background 0.3s ease, transform 0.1s ease;
-    }
-
-    .start-button:hover {
-      background: #3ac7be;
-      transform: translateY(-2px);
-    }
-
   </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Função do Primeiro Grau</h1>
-  </header>
+<a id="top"></a>
 
-  <div class="content">
-    <h2>O que é a Função do Primeiro Grau?</h2>
-    <p>A função do primeiro grau, também chamada de função linear, é uma função matemática que representa uma reta. O comportamento dessa reta depende dos valores dos coeficientes na função. Sua forma geral é:</p>
-    <pre>f(k) = ak + b</pre>
-    <p>Onde:</p>
-    <ul>
-      <li><strong>a</strong>: coeficiente angular, que define a inclinação da reta;</li>
-      <li><strong>b</strong>: coeficiente linear, que define o ponto onde a reta corta o eixo Y;</li>
-      <li><strong>k</strong>: variável independente, ou seja, o valor que se substitui na função.</li>
-    </ul>
+<header>
+  <h1>Função do Primeiro Grau</h1>
+</header>
 
-    <h2>Como Resolver uma função do Primeiro Grau?</h2>
-    <p>Para resolver uma função do primeiro grau, precisamos encontrar o valor de <strong>k</strong> que torna a função verdadeira. Vamos resolver um exemplo simples:</p>
-    <pre>2k + 3 = 7</pre>
-    <p><strong>Passo 1:</strong> Subtraímos 3 dos dois lados da função para isolar o termo com <strong>k</strong>:</p>
-    <pre>2k = 4</pre>
-    <p><strong>Passo 2:</strong> Agora, dividimos ambos os lados por 2 para encontrar o valor de <strong>k</strong>:</p>
-    <pre>k = 2</pre>
-    <p><strong>Logo, a solução é k = 2.</strong></p>
+<div class="content">
 
-    <h2>Propriedades Importantes da Função do Primeiro Grau</h2>
-    <ul>
-      <li>O gráfico de uma função do primeiro grau é sempre uma <strong>reta</strong>;</li>
-      <li>Se <strong>a &gt; 0</strong>, a reta é crescente (subindo da esquerda para a direita);</li>
-      <li>Se <strong>a &lt; 0</strong>, a reta é decrescente (descendo da esquerda para a direita);</li>
-      <li>O valor de <strong>b</strong> determina o ponto onde a reta intercepta o eixo Y;</li>
-      <li>A função do primeiro grau pode ser usada para modelar situações como o planejamento de economias mensais.</li>
-    </ul>
+  <div class="box">
+    <h2>Por que aprender isso?</h2>
+    <p>Funções do primeiro grau aparecem em dinheiro guardado, velocidade, jogos, aplicativos e previsões do dia a dia.</p>
+  </div>
 
-    <h2>Exemplo Gráfico</h2>
-    <p>Vamos visualizar o gráfico de uma função do primeiro grau. Para a função <strong>f(k) = 2k + 3</strong>, o gráfico seria uma reta crescente. Aqui está um exemplo:</p>
-    <img src="grafico_funcao.png" alt="Gráfico da função f(k)=2k+3">
-    
-    <h2>Outro Exemplo</h2>
-    <p>Agora, vamos analisar uma função em que <strong>a &lt; 0</strong>, ou seja, a reta será decrescente. Para a função <strong>f(k) = -3k + 5</strong>, temos:</p>
-    <pre>f(k) = -3k + 5</pre>
-    <p>Para <strong>k = 0</strong>, o valor de <strong>f(k)</strong> é:</p>
-    <pre>f(0) = -3(0) + 5 = 5</pre>
-    <p>Ou seja, o ponto <strong>(0, 5)</strong> está no gráfico. Como o coeficiente angular é negativo, a reta descerá à medida que <strong>k</strong> aumenta.</p>
+  <h2>O que é a Função do Primeiro Grau?</h2>
+  <p>Uma função do primeiro grau descreve uma reta. Sua forma geral é:</p>
+  <pre>f(k) = ak + b</pre>
 
-    <h2>Resumo</h2>
-    <p>A função do primeiro grau é uma ferramenta fundamental para resolver problemas que envolvem relações lineares. Com ela, podemos modelar desde simples comportamentos de reta até situações mais complexas.</p>
-	<p>🚀 Agora que você está preparado, será que tem coragem de enfrentar os drones do Dr. Kalinkus 🦾 e conquistar o desafio? 💥💡<p>
- 	 </div>
+  <ul>
+    <li><strong>a</strong>: coeficiente angular — a inclinação da reta;</li>
+    <li><strong>b</strong>: coeficiente linear — onde a reta toca o eixo Y;</li>
+    <li><strong>k</strong>: variável independente.</li>
+  </ul>
 
-  <button class="start-button" onclick="window.location.href='index.html'">Voltar ao Início!</button>
+  <div class="box">
+    <h2>Exemplo do Cotidiano</h2>
+    <p>Imagine que você economiza R$ 20 por semana e já tem R$ 50 guardados. A quantidade de dinheiro após <strong>k</strong> semanas é:</p>
+    <pre>f(k) = 20k + 50</pre>
+    <p>Isso já é uma função do primeiro grau!</p>
+  </div>
 
-  <footer>
-    <p>Criado por Leonardo de Souza</p>
-  </footer>
+  <h2>Como Resolver uma Função do Primeiro Grau?</h2>
+  <p>Exemplo: resolver</p>
+  <pre>2k + 3 = 7</pre>
+
+  <p><strong>Passo 1:</strong> Isolar o termo com <strong>k</strong>:</p>
+  <pre>2k = 4</pre>
+
+  <p><strong>Passo 2:</strong> Dividir pelos coeficientes:</p>
+  <pre>k = 2</pre>
+
+  <h2>Propriedades Importantes</h2>
+
+  <ul>
+    <li>O gráfico sempre é uma reta;</li>
+    <li>Se <strong>a &gt; 0</strong>, a reta sobe (crescente);</li>
+    <li>Se <strong>a &lt; 0</strong>, a reta desce (decrescente);</li>
+    <li><strong>b</strong> mostra onde a reta toca o eixo Y.</li>
+  </ul>
+
+  <h2>Exemplo Gráfico</h2>
+
+  <p>Função crescente: <strong>f(k) = 2k + 3</strong></p>
+  <img src="grafico_funcao.png" alt="Gráfico da função do primeiro grau">
+
+  <h2>Erros Comuns dos Alunos</h2>
+  <ul>
+    <li>Trocar os papéis de <strong>a</strong> e <strong>b</strong>;</li>
+    <li>Esquecer que <strong>b</strong> é o valor quando <strong>k = 0</strong>;</li>
+    <li>Errar sinais ao isolar o <strong>k</strong>;</li>
+    <li>Achar que toda função é crescente.</li>
+  </ul>
+
+  <h2>Exercícios (pratique!)</h2>
+
+  <div class="exercise-box">
+    <p><strong>1.</strong> Um táxi cobra R$ 5 de bandeirada + R$ 2 por km. Escreva a função em termos de <strong>k</strong>.</p>
+    <button onclick="toggleAnswer('a1')">Mostrar resposta</button>
+    <div id="a1" class="answer">f(k) = 2k + 5</div>
+  </div>
+
+  <div class="exercise-box">
+    <p><strong>2.</strong> A função f(k) = -2k + 6 é crescente ou decrescente?</p>
+    <button onclick="toggleAnswer('a2')">Mostrar resposta</button>
+    <div id="a2" class="answer">Decrescente, pois a = -2.</div>
+  </div>
+
+  <div class="exercise-box">
+    <p><strong>3.</strong> Para a função f(k) = 4k - 8, quanto vale f(3)?</p>
+    <button onclick="toggleAnswer('a3')">Mostrar resposta</button>
+    <div id="a3" class="answer">f(3) = 4.</div>
+  </div>
+
+  <div class="exercise-box">
+    <p><strong>4. Desafio do Kalinkus ⚔️</strong><br>Resolva: 3k - 5 = 16</p>
+    <button onclick="toggleAnswer('a4')">Mostrar resposta</button>
+    <div id="a4" class="answer">k = 7</div>
+  </div>
+
+  <p>🚀 Agora que você está pronto, será que consegue vencer os drones do Dr. Kalinkus no próximo desafio?</p>
+
+</div>
+
+<footer>
+  <div class="back-top">
+    <a href="index.html">
+      <button style="background:#ff9f43; color:#0d2c1a;" aria-label="Voltar ao início para a página inicial">
+        Voltar ao início
+      </button>
+    </a>
+  </div>
+  <p>Criado por Leonardo de Souza</p>
+</footer>
+
+<script>
+function toggleAnswer(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
+</script>
 
 </body>
 </html>

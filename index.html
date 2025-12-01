@@ -18,14 +18,15 @@
 
     body {
       font-family: 'Open Sans', sans-serif;
-      background: var(--game-bg);
+      background: url('lab-background.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: var(--dark-color);
       margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px; /* dá respiro em telas pequenas */
+      padding: 20px;
       flex-direction: column;
       justify-content: space-between;
     }
@@ -38,7 +39,7 @@
       text-align: center;
       max-width: 900px;
       width: 100%;
-      border: 5px solid #00cc44; /* verde se você já trocou */
+      border: 5px solid #00cc44;
       animation: fadeIn 1s ease-out;
       z-index: 10;
     }
@@ -50,10 +51,10 @@
 
     h1 {
       font-family: 'Press Start 2P', cursive;
-      color: #00cc44; /* verde no título */
+      color: #00cc44;
       font-size: 2.2em;
       margin-bottom: 20px;
-      text-shadow: 4px 4px 0px #004d1a; /* sombra verde mais escura */
+      text-shadow: 4px 4px 0px #004d1a;
     }
 
     .story-text {
@@ -156,8 +157,8 @@
       Resolva-as corretamente para destruí-los e salvar a educação! 📚
     </p>
 
-    <button class="start-button" onclick="window.location.href='jogo.html'">Começar Jogo!</button>
-    <button class="start-button" onclick="window.location.href='explicacao.html'">Ver Explicação!</button>
+    <button class="start-button" onclick="window.location.href='jogo.html'">🎮 Começar Jogo!</button>
+    <button class="start-button" onclick="window.location.href='explicacao.html'">📚 Ver Explicação!</button>
   </div>
 
   <p style="font-size: 0.8em; color: #333; text-align: center; margin-top: 20px;">Criado por Leonardo de Souza</p>
