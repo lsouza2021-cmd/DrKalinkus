@@ -503,7 +503,7 @@ function startTimer(){
 function endGame(){
   state.running = false;
   clearInterval(state.timerInterval);
-  alert('Infelizmente o Dr.Kalinkus venceu dessa vez! Mas não desista, tente novamente!📚💪);
+  alert('Tempo esgotado! Sua pontuação: ' + state.score);
 }
 
 function nextProblem(){
