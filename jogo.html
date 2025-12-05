@@ -458,7 +458,7 @@ canvas.addEventListener('click', function(ev){
       state.time = Math.max(0, state.time - 5);
       animateHit(t.x, t.y, false);
     }
-    updateHUD();
+    updateHUD(); checkGameEnd();
   }
 });
 
@@ -496,7 +496,7 @@ function startTimer(){
     if(state.time <= 0){
       state.time = 0; endGame();
     }
-    updateHUD();
+    updateHUD(); checkGameEnd();
   },1000);
 }
 
@@ -512,7 +512,7 @@ function nextProblem(){
   state.currentEq = eq;
   const count = Math.min(8, 3 + state.level);
   spawnTargets(count, eq.x);
-  updateHUD();
+  updateHUD(); checkGameEnd();
 }
 
 function updateHUD(){
@@ -538,7 +538,7 @@ document.getElementById('pauseBtn').addEventListener('click', ()=>{
 });
 
 document.getElementById('resetBtn').addEventListener('click', ()=>{
-  state.running=false; state.score=0; state.time=120; state.level=1; state.targets=[]; state.currentEq=null; clearInterval(state.timerInterval); updateHUD(); ctx.clearRect(0,0,width,height);
+  state.running=false; state.score=0; state.time=120; state.level=1; state.targets=[]; state.currentEq=null; clearInterval(state.timerInterval); updateHUD(); checkGameEnd(); ctx.clearRect(0,0,width,height);
 });
 
 document.getElementById('shuffleBtn').addEventListener('click', ()=>{ nextProblem(); });
@@ -552,9 +552,32 @@ function resize(){
   width = canvas.width; height = canvas.height;
 }
 window.addEventListener('resize', ()=>{ resize(); });
-setTimeout(()=>{ resize(); updateHUD(); },50);
+setTimeout(()=>{ resize(); updateHUD(); checkGameEnd(); },50);
 
-updateHUD();
+updateHUD(); checkGameEnd();
+
+function checkGameEnd() {
+    const level = parseInt(document.getElementById("difficulty").value, 10);
+    const score = state.score;
+
+    const limits = {
+        1: 100,
+        2: 200,
+        3: 300
+    };
+
+    const messages = {
+        1: "🎉 Parabéns! Você venceu o Dr. Kalinkus no nível FÁCIL!\nQue tal tentar o MÉDIO agora?",
+        2: "🔥 Excelente! Você derrotou o Dr. Kalinkus no nível MÉDIO!\nConsegue encarar o DIFÍCIL?",
+        3: "🚀 INCRÍVEL! Você venceu o Dr. Kalinkus no nível DIFÍCIL!\nVocê zerou o jogo como um verdadeiro mestre!"
+    };
+
+    if (score >= limits[level]) {
+        alert(messages[level]);
+        window.location.href = "index.html"; 
+    }
+}
+
 </script>
 </body>
 </html>
